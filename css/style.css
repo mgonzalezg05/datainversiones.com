@@ -1,0 +1,11 @@
+html { scroll-behavior: smooth; }
+
+/* From index.html */
+@keyframes float { 0% {transform: translateY(0)} 50% {transform: translateY(-6px)} 100% {transform: translateY(0)} }
+.floaty { animation: float 6s ease-in-out infinite; }
+
+/* From blog page */
+.reading-container { max-width: 72ch; }
+.heading-anchor { opacity: 0; transition: opacity .2s; }
+.group:hover .heading-anchor { opacity: 1; }
+.toc a.active { color: #0369a1; font-weight: 600; }
