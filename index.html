@@ -101,7 +101,7 @@
 <body class="bg-white text-slate-800 antialiased">
   <!-- Header / Nav -->
   <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <a href="#inicio" class="flex items-center gap-2">
           <div class="w-9 h-9 rounded-xl bg-brand-500 text-white grid place-content-center font-extrabold shadow-smooth">DI</div>
@@ -111,6 +111,7 @@
           <a href="#herramientas" class="hover:text-brand-600">Herramientas</a>
           <a href="#quees" class="hover:text-brand-600">¿Qué es?</a>
           <a href="#blog" class="hover:text-brand-600">Blog</a>
+          <a href="#" id="openModalBtn" class="hover:text-brand-600">Newsletter</a>
           <a href="#testimonios" class="hover:text-brand-600">Testimonios</a>
           <a href="#contacto" class="hover:text-brand-600">Contacto</a>
           <a href="#ingresar" class="px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700 shadow-smooth">Ingresar</a>
@@ -124,6 +125,7 @@
           <a href="#herramientas" class="px-3 py-2 rounded-lg hover:bg-slate-100">Herramientas</a>
           <a href="#quees" class="px-3 py-2 rounded-lg hover:bg-slate-100">¿Qué es?</a>
           <a href="#blog" class="px-3 py-2 rounded-lg hover:bg-slate-100">Blog</a>
+          <a href="#" id="openModalBtnMobile" class="px-3 py-2 rounded-lg hover:bg-slate-100">Newsletter</a>
           <a href="#testimonios" class="px-3 py-2 rounded-lg hover:bg-slate-100">Testimonios</a>
           <a href="#contacto" class="px-3 py-2 rounded-lg hover:bg-slate-100">Contacto</a>
           <a href="#ingresar" class="px-3 py-2 rounded-lg bg-brand-600 text-white">Ingresar</a>
@@ -134,9 +136,9 @@
 
   <!-- Hero -->
   <section id="inicio" class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-50 via-white to-brand-100"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-100 to-brand-200"></div>
     <div class="absolute -top-24 -right-24 w-[420px] h-[420px] rounded-full bg-brand-200 blur-3xl opacity-40"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <div class="relative max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
       <div class="grid md:grid-cols-2 gap-10 items-center">
         <div>
           <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
@@ -201,7 +203,7 @@
 
   <!-- Herramientas / Calculadoras -->
   <section id="herramientas" class="py-16 md:py-24 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl">
         <h2 class="text-3xl md:text-4xl font-extrabold">Herramientas rápidas</h2>
         <p class="mt-2 text-slate-600">Calculadoras simples para estimar <strong>rendimientos</strong> y convertir <strong>TNA/TEA</strong>. Valores ilustrativos, no constituyen asesoramiento financiero.</p>
@@ -265,7 +267,7 @@
 
   <!-- ¿Qué es? -->
   <section id="quees" class="py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-10 items-start">
         <div>
           <h2 class="text-3xl md:text-4xl font-extrabold">¿Qué es Datainversiones.com?</h2>
@@ -291,7 +293,7 @@
 
   <!-- Testimonios -->
   <section id="testimonios" class="py-16 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl md:text-4xl font-extrabold">Clientes contentos (placeholder)</h2>
       <p class="mt-2 text-slate-600">Ejemplos inventados para luego reemplazar por casos reales cuando esté operativa la página.</p>
       <div class="mt-8 grid md:grid-cols-3 gap-6">
@@ -331,7 +333,7 @@
 
   <!-- Blog -->
   <section id="blog" class="py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <h2 class="text-3xl md:text-4xl font-extrabold">Desde Nuestro Blog</h2>
         <p class="mt-2 text-slate-600">Análisis y guías sobre el mercado financiero argentino.</p>
@@ -373,7 +375,7 @@
 
   <!-- Ingresar con Google -->
   <section id="ingresar" class="py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-8 items-center">
         <div>
           <h2 class="text-3xl md:text-4xl font-extrabold">Ingresá en un click</h2>
@@ -399,7 +401,7 @@
 
   <!-- Contacto -->
   <section id="contacto" class="py-16 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl">
         <h2 class="text-3xl md:text-4xl font-extrabold">Hablemos</h2>
         <p class="mt-2 text-slate-600">Contanos qué herramientas te gustaría ver o pedí acceso a la beta.</p>
@@ -431,7 +433,7 @@
 
   <!-- Footer -->
   <footer class="py-12 border-t border-slate-200" id="terminos">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
       <div>
         <div class="flex items-center gap-2">
           <div class="w-8 h-8 rounded-xl bg-brand-500 text-white grid place-content-center font-extrabold">DI</div>
@@ -459,8 +461,151 @@
     </div>
   </footer>
 
+  <!-- Newsletter Modal (Rediseñado) -->
+  <div id="newsletterModal" class="fixed inset-0 bg-black bg-opacity-60 z-50 hidden items-center justify-center p-4 transition-opacity duration-300">
+    <div id="newsletterPanel" class="bg-white rounded-2xl shadow-xl max-w-lg w-full relative transform scale-95 transition-transform duration-300 text-center overflow-hidden">
+      
+      <!-- Header con ícono -->
+      <div class="bg-brand-50 p-6 border-b border-brand-100">
+        <div class="w-20 h-20 mx-auto rounded-full bg-brand-100 text-brand-500 grid place-content-center">
+          <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-3.75-2.25M21 12l-3.75 2.25" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Contenido -->
+      <div class="p-8">
+        <!-- Close Button -->
+        <button id="closeModalBtn" class="absolute top-3 right-3 text-slate-400 hover:text-slate-700">
+          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+
+        <!-- Form Content -->
+        <div id="formContent">
+          <h3 class="text-2xl md:text-3xl font-bold text-slate-800">Adelántate al mercado</h3>
+          <p class="mt-2 text-slate-600 max-w-sm mx-auto">Únete a cientos de inversores que reciben nuestro análisis accionable cada semana.</p>
+          
+          <ul class="mt-6 text-left space-y-3 text-slate-700">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+              <span><strong>Análisis accionables:</strong> Oportunidades claras en bonos y LECAPs.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+              <span><strong>Contenido exclusivo:</strong> Data y planillas que no compartimos en otro lado.</span>
+            </li>
+          </ul>
+
+          <form id="newsletterForm" class="mt-6 space-y-4">
+            <div>
+              <input type="text" id="modalName" name="name" required class="mt-1 w-full border text-base border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-brand-500 focus:border-brand-500" placeholder="Tu nombre">
+            </div>
+            <div>
+              <input type="email" id="modalEmail" name="email" required class="mt-1 w-full border text-base border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-brand-500 focus:border-brand-500" placeholder="Tu email">
+            </div>
+            <button type="submit" class="w-full py-3 rounded-xl bg-brand-600 text-white hover:bg-brand-700 shadow-smooth font-semibold text-base">Quiero mi ventaja</button>
+          </form>
+          <p class="mt-4 text-xs text-slate-500">100% gratis. Sin spam. Date de baja cuando quieras.</p>
+        </div>
+
+        <!-- Success Message -->
+        <div id="successContent" class="hidden">
+          <div class="w-16 h-16 mx-auto rounded-full bg-green-100 text-green-600 grid place-content-center">
+            <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+          </div>
+          <h3 class="mt-4 text-2xl font-bold text-slate-800">¡Estás dentro!</h3>
+          <p class="mt-2 text-slate-600">Revisa tu correo para confirmar la suscripción. ¡Gracias!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script>
+    // --- Almacenamiento de suscriptores (solo para demostración) ---
+    const newsletterSubscribers = [];
+    // IMPORTANTE: En una aplicación real, los datos deben enviarse a un servidor.
+    // No deben guardarse en el código del cliente.
+
+    // --- Lógica del Modal de Newsletter ---
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('newsletterModal');
+      const panel = document.getElementById('newsletterPanel');
+      const openBtn = document.getElementById('openModalBtn');
+      const openBtnMobile = document.getElementById('openModalBtnMobile');
+      const closeBtn = document.getElementById('closeModalBtn');
+      const form = document.getElementById('newsletterForm');
+      const formContent = document.getElementById('formContent');
+      const successContent = document.getElementById('successContent');
+
+      const showModal = () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        setTimeout(() => {
+          modal.classList.remove('opacity-0');
+          panel.classList.remove('scale-95');
+        }, 10);
+      };
+
+      const hideModal = () => {
+        modal.classList.add('opacity-0');
+        panel.classList.add('scale-95');
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          // Resetear el form para la próxima vez
+          formContent.classList.remove('hidden');
+          successContent.classList.add('hidden');
+          form.reset();
+        }, 300);
+      };
+
+      openBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        showModal();
+      });
+      
+      openBtnMobile.addEventListener('click', (e) => {
+        e.preventDefault();
+        showModal();
+      });
+
+      closeBtn.addEventListener('click', hideModal);
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          hideModal();
+        }
+      });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nameInput = document.getElementById('modalName');
+        const emailInput = document.getElementById('modalEmail');
+
+        if (nameInput.value && emailInput.value) {
+          const subscriber = {
+            name: nameInput.value,
+            email: emailInput.value,
+            subscribedAt: new Date().toISOString()
+          };
+          newsletterSubscribers.push(subscriber);
+
+          console.log('--- Nuevo Suscriptor (DEMO) ---');
+          console.log(subscriber);
+          console.log('--- Lista Completa (DEMO) ---');
+          console.log(newsletterSubscribers);
+
+          formContent.classList.add('hidden');
+          successContent.classList.remove('hidden');
+
+          setTimeout(hideModal, 3000); // Cierra el modal automáticamente tras 3 segundos
+        }
+      });
+    });
+
+    // --- Lógica existente ---
     // Mobile menu toggle
     document.getElementById('menuBtn').addEventListener('click', () => {
       document.getElementById('mobileNav').classList.toggle('hidden');
