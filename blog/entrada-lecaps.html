@@ -123,6 +123,17 @@
           <a href="../index.html#blog" class="text-brand-700 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-500">Blog</a>
           <a href="../index.html#contacto" class="hover:text-brand-700 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-500">Contacto</a>
         </nav>
+        <button class="md:hidden inline-flex items-center p-2 rounded-lg hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-500" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+        </button>
+      </div>
+      <div id="mobileNav" class="md:hidden hidden pb-4">
+        <div class="grid gap-2 text-sm">
+          <a href="../index.html" class="px-3 py-2 rounded-lg hover:bg-slate-100">Inicio</a>
+          <a href="../index.html#herramientas" class="px-3 py-2 rounded-lg hover:bg-slate-100">Herramientas</a>
+          <a href="../index.html#blog" class="px-3 py-2 rounded-lg hover:bg-slate-100">Blog</a>
+          <a href="../index.html#contacto" class="px-3 py-2 rounded-lg hover:bg-slate-100">Contacto</a>
+        </div>
       </div>
     </div>
   </header>
@@ -451,6 +462,24 @@
   </footer>
 
   <script>
+    // Navegación móvil
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+
+    if (menuBtn && mobileNav) {
+      menuBtn.addEventListener('click', () => {
+        const isHidden = mobileNav.classList.toggle('hidden');
+        menuBtn.setAttribute('aria-expanded', String(!isHidden));
+      });
+
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.add('hidden');
+          menuBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
     // Scroll-spy para TOC
     const headings = document.querySelectorAll('main article section[id]');
     const tocLinks = document.querySelectorAll('.toc a');
