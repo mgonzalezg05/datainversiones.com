@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin LECAPs - datainversiones.com</title>
+    <link rel="stylesheet" href="assets/app.css">
+    <style>
+        .drop-zone {
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+        .drop-zone.drag-over {
+            background-color: #f0f8ff;
+            border-color: #0d6efd;
+        }
+        #preview, #validation-errors {
+            max-height: 200px;
+            overflow-y: auto;
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>Panel de Administración de LECAPs</h1>
+            <a href="index.html" class="btn secondary">Ver Home</a>
+        </header>
+
+        <!-- Carga y Parámetros -->
+        <div class="card">
+            <h2>Carga de Datos y Parámetros Globales</h2>
+            
+            <div id="json-upload-area">
+                <div id="drop-zone" class="drop-zone">
+                    Arrastrá y soltá tu archivo `lecaps.json` aquí, o hacé clic para seleccionarlo.
+                </div>
+                <input type="file" id="file-input" class="hidden" accept=".json">
+                <div id="validation-errors" class="hidden"></div>
+                <div id="preview" class="hidden"></div>
+                <button id="confirm-import-btn" class="btn hidden" style="margin-top: 10px;">Confirmar e Importar Datos</button>
+            </div>
+
+            <form id="params-form" class="mt-4">
+                <h3>Parámetros Globales</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                    <div>
+                        <label for="param-base">Base de Cálculo</label>
+                        <input type="text" id="param-base" name="base" value="30_360" readonly>
+                    </div>
+                    <div>
+                        <label for="param-tplus">T+N (días liquidación)</label>
+                        <input type="number" id="param-tplus" name="t_plus" min="0" step="1">
+                    </div>
+                    <div>
+                        <label for="param-comision">Comisión (%)</label>
+                        <input type="number" id="param-comision" name="comision_pct" min="0" step="0.0001">
+                    </div>
+                    <div>
+                        <label for="param-dm-pct">DM (%)</label>
+                        <input type="number" id="param-dm-pct" name="dm_pct" min="0" step="0.0001">
+                    </div>
+                    <div>
+                        <label for="param-dm-monto">DM (monto fijo)</label>
+                        <input type="number" id="param-dm-monto" name="dm_monto" min="0" step="0.01">
+                    </div>
+                </div>
+                <button type="submit" class="btn mt-3">Guardar Parámetros y Recalcular</button>
+            </form>
+        </div>
+
+        <!-- CRUD de Instrumentos -->
+        <div class="card">
+            <h2>Instrumentos Cargados</h2>
+            <div class="controls">
+                <button id="export-json-btn" class="btn secondary">Exportar lecaps.json</button>
+            </div>
+            <div style="overflow-x: auto;" class="mt-4">
+                <table id="admin-lecaps-table">
+                    <thead>
+                        <tr>
+                            <th>Ticker</th>
+                            <th>Emisión</th>
+                            <th>Vencimiento</th>
+                            <th>TEM</th>
+                            <th>Precio Último</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-lecaps-table-body">
+                        <!-- Filas de instrumentos -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="admin/LecapsAdminPanel.js"></script>
+</body>
+</html>

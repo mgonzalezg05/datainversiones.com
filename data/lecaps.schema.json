@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LECAPs Data Schema",
+  "description": "Schema for validating the lecaps.json data file.",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^lecaps\\.v[0-9]+$"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "params": {
+      "type": "object",
+      "properties": {
+        "base": {
+          "type": "string",
+          "enum": ["30_360", "ACT_365"]
+        },
+        "t_plus": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "comision_pct": {
+          "type": "number",
+          "minimum": 0
+        },
+        "dm_pct": {
+          "type": "number",
+          "minimum": 0
+        },
+        "dm_monto": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": ["base", "t_plus", "comision_pct"]
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ticker": {
+            "type": "string",
+            "pattern": "^[A-Z0-9]+$"
+          },
+          "emision": {
+            "type": "string",
+            "format": "date"
+          },
+          "vencimiento": {
+            "type": "string",
+            "format": "date"
+          },
+          "tem": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "precios": {
+            "type": "object",
+            "properties": {
+              "ultimo": { "type": ["number", "null"] },
+              "compra": { "type": ["number", "null"] },
+              "cierre": { "type": ["number", "null"] },
+              "hora": { "type": ["string", "null"], "format": "date-time" }
+            },
+            "required": ["ultimo", "compra", "cierre", "hora"]
+          },
+          "overrides": {
+            "type": "object",
+            "properties": {
+              "comision_pct": { "type": ["number", "null"], "minimum": 0 },
+              "dm_pct": { "type": ["number", "null"], "minimum": 0 },
+              "dm_monto": { "type": ["number", "null"], "minimum": 0 },
+              "t_plus": { "type": ["integer", "null"], "minimum": 0 }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": ["ticker", "emision", "vencimiento", "tem", "precios"]
+      }
+    }
+  },
+  "required": ["version", "updated_at", "params", "items"]
+}

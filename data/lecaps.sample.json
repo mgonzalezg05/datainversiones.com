@@ -1,0 +1,91 @@
+
+{
+  "version": "lecaps.v1",
+  "updated_at": "2025-09-18T15:00:00-03:00",
+  "params": {
+    "base": "30_360",
+    "t_plus": 0,
+    "comision_pct": 0.0015,
+    "dm_pct": 0.0005,
+    "dm_monto": 0
+  },
+  "items": [
+    {
+      "ticker": "S31O5",
+      "emision": "2025-08-29",
+      "vencimiento": "2025-10-31",
+      "tem": 0.042,
+      "precios": {
+        "ultimo": 101.85,
+        "compra": 101.80,
+        "cierre": 101.75,
+        "hora": "2025-09-18T14:55:00-03:00"
+      },
+      "overrides": {
+        "comision_pct": null,
+        "dm_pct": null,
+        "dm_monto": null,
+        "t_plus": null
+      }
+    },
+    {
+      "ticker": "S28N5",
+      "emision": "2025-08-29",
+      "vencimiento": "2025-11-28",
+      "tem": 0.0435,
+      "precios": {
+        "ultimo": 102.90,
+        "compra": 102.88,
+        "cierre": 102.85,
+        "hora": "2025-09-18T14:58:00-03:00"
+      },
+      "overrides": {
+        "comision_pct": 0.0010,
+        "dm_pct": null,
+        "dm_monto": 0.01,
+        "t_plus": 1
+      }
+    },
+    {
+      "ticker": "S31D5",
+      "emision": "2025-09-30",
+      "vencimiento": "2025-12-31",
+      "tem": 0.045,
+      "precios": {
+        "ultimo": null,
+        "compra": 103.50,
+        "cierre": 103.40,
+        "hora": "2025-09-18T11:20:00-03:00"
+      },
+      "overrides": {}
+    },
+    {
+      "ticker": "S31E6",
+      "emision": "2025-09-30",
+      "vencimiento": "2026-01-31",
+      "tem": 0.046,
+      "precios": {
+        "ultimo": 104.20,
+        "compra": null,
+        "cierre": 104.10,
+        "hora": "2025-09-16T16:30:00-03:00" 
+      },
+      "overrides": {
+        "t_plus": 2
+      }
+    },
+    {
+      "ticker": "X23F6",
+      "emision": "2025-10-20",
+      "vencimiento": "2026-02-23",
+      "tem": 0.048,
+      "precios": {
+        "ultimo": 105.10,
+        "compra": 105.05,
+        "cierre": 105.00,
+        "hora": null
+      },
+      "overrides": {}
+    }
+  ]
+}
